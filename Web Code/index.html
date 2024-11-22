@@ -9,40 +9,107 @@
 <body>
     <header>
         <div class="header-content">
-            <!-- Left Section -->
+            <!-- Logo Section -->
             <div class="left-section">
                 <img class="logo" src="https://raw.githubusercontent.com/gilanggnw/Samsul/refs/heads/main/LOGO%20SAMSUL%20INVERTED%20NO%20BG%20NO%20TEXT.png" alt="SAMSUL Logo">
                 <span class="web-title">SAMSUL</span>
             </div>
 
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <button class="nav-link active" onclick="showPage('beranda', this)">Beranda</button>
+                <button class="nav-link" onclick="showPage('layanan', this)">Layanan</button>
+                <button class="nav-link" onclick="showPage('tentang', this)">Tentang Kita</button>
+            </nav>
+
             <!-- Right Section -->
             <div class="right-section">
-                <div class="cash-display">Samsul Cash: <span>Rp. 60.000.000</span></div>
-                <div class="profile">
-                    <img class="avatar" src="https://raw.githubusercontent.com/gilanggnw/Samsul/refs/heads/main/Avatar.jpg" alt="Mr Samsul">
-                    <span>Mr Samsul</span>
+                <div class="cash-area">
+                    <div class="cash-display" onmouseover="showCashMenu()" onmouseout="hideCashMenu()">
+                        Samsul Cash: <span>Rp. 60.000.000</span>
+                    </div>
+                    <div class="popup-menu" id="cash-menu">
+                        <button>Top Up</button>
+                        <button>Transfer</button>
+                        <button>Tarik Tunai</button>
+                        <button>Riwayat</button>
+                    </div>
+                </div>
+                <div class="profile-box" role="button" tabindex="0">
+                    <div class="profile">
+                        <img class="avatar" src="https://raw.githubusercontent.com/gilanggnw/Samsul/refs/heads/main/Avatar.jpg" alt="Mr Samsul">
+                        <span>Mr Samsul</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <section class="features">
-            <div class="feature" id="s-daur">S - Daur</div>
-            <div class="feature" id="s-analisis">S - Analisis</div>
-            <div class="feature" id="s-timbang">S - Timbang</div>
-            <div class="feature" id="s-panggil">S - Panggil</div>
-            <div class="feature" id="s-maggot">S - Maggot</div>
-            <div class="feature" id="s-mitra">S - Mitra</div>
-            <div class="feature" id="s-tjabang">S - Tjabang</div>
-            <div class="feature" id="s-promo">S - Promo</div>
-            <div class="feature" id="s-poin">S - Poin</div>
+        <!-- Beranda Section -->
+        <section id="beranda" class="page">
+            <div class="beranda-banner">
+                <img src="path_to_your_image" alt="SAMSUL Banner" class="banner-image">
+            </div>
+            <h2>Selamat Datang di SAMSUL</h2>
+            <p>Beranda masih kosong. Silakan pilih menu lain.</p>
+        </section>
+
+        <!-- Layanan Section -->
+        <section id="layanan" class="page" style="display: none;">
+            <h2>Layanan Kami</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Daur"> <!-- Placeholder logo -->
+                    <h3>S - Daur</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Analisis"> <!-- Placeholder logo -->
+                    <h3>S - Analisis</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Timbang"> <!-- Placeholder logo -->
+                    <h3>S - Timbang</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Panggil"> <!-- Placeholder logo -->
+                    <h3>S - Panggil</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Maggot"> <!-- Placeholder logo -->
+                    <h3>S - Maggot</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Mitra"> <!-- Placeholder logo -->
+                    <h3>S - Mitra</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Tjabang"> <!-- Placeholder logo -->
+                    <h3>S - Tjabang</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Promo"> <!-- Placeholder logo -->
+                    <h3>S - Promo</h3>
+                </div>
+                <div class="feature">
+                    <img src="placeholder-logo.png" alt="Logo S-Poin"> <!-- Placeholder logo -->
+                    <h3>S - Poin</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Kita Section -->
+        <section id="tentang" class="page" style="display: none;">
+            <h2>Tentang Kita</h2>
+            <p>Sistem Analisis & Monitoring Emisi Karbon Usaha Kecil.</p>
         </section>
     </main>
+
     <footer>
-        <nav>
-            <button>Beranda</button>
-            <button>Selanjutnya</button>
-        </nav>
+        <!-- Footer intentionally left empty -->
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
